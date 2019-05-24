@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Онлайн собеседование</title>
+
+    <link rel="preload" href="fonts/OpenSans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/NotoSans/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/NotoSans/NotoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="prerender" href="ending.html">
+
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="css/common.css" as="style">
+    <link rel="preload" href="css/common-tablet(425-1024).css" media="(min-width: 425px) and (max-width: 1024px)" as="style" type="text/css">
+    <link rel="preload" href="css/common-desktop(1024+).css" media="(min-width: 1025px)" as="style" type="text/css">
+    <link rel="preload" href="css/questions-desktop(1024+).css" media="(min-width: 1025px)" as="style">
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/questions.css">
+    <link rel="stylesheet" href="css/common-tablet(425-1024).css" media="(min-width: 425px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/common-desktop(1024+).css" media="(min-width: 1025px)">
+    <link rel="stylesheet" href="css/questions-desktop(1024+).css" media="(min-width: 1025px)">
+</head>
+<body>
+<header class="header">
+    <img class="header__logo" src="img/svg/logo.svg" alt="ПриватБанк24">
+    <nav class="language">
+        <a href="#" class="language__item">укр</a>
+        <a href="#" class="language__item language__item_active">рус</a>
+    </nav>
+</header>
+<main class="content" id="container">
+    <h1 class="content__title">Вопросы <span id="step">1</span> из 5</h1>
+    <h3 class="content__subtitle">
+        Давайте познакомимся!
+        Расскажите о себе
+    </h3>
+    <ol class="content__order-list">
+        <li class="content__order-item">
+            На какой специальности Вы учились?
+        </li>
+        <li class="content__order-item">
+            Почему выбрали такую специальность?
+        </li>
+        <li class="content__order-item">
+            Какой опыт работы имеете?
+        </li>
+        <li class="content__order-item">
+            С чем был связана смена мест работы/должностей?
+        </li>
+        <li class="content__order-item">
+            Какие вакансии сейчас рассматриваете?
+        </li>
+    </ol>
+    <article class="warning">
+        <h4 class="warning__title">Помните!</h4>
+        <p class="warning__text">
+            Вам необходимо ответить на все вопросы.
+            От полноты и качестват ответов зависит результат интервью.
+        </p>
+    </article>
+    <figure class="recording" id="recording">
+        <video id="videoSave" class="recording__video recording__video-preview" controls></video>
+        <video id="video" class="recording__video" autoplay></video>
+        <figcaption class="recording__descr" id="marker">
+            <img src="#" alt="record">
+            <span>готово к записи</span>
+        </figcaption>
+    </figure>
+    <button id="btnStart" class="content__button">
+        <span>записать видео</span>
+        <img src="img/svg/record.svg" alt="record">
+    </button>
+    <button id="btnStop" class="content__button content__button_hidden">
+        <span>Закончить запись</span>
+        <img src="img/svg/cancel.svg" alt="cancel">
+    </button>
+    <button id="btnReplay" class="content__button content__button_hidden">
+        <span>Перезаписать видео</span>
+        <img src="img/svg/replay.svg" alt="replay">
+    </button>
+    <button id="btnPause" class="content__button content__button_hidden">
+        <span>поставить паузу</span>
+        <img src="img/svg/pause.svg" alt="pause">
+    </button>
+    <button id="btnNext" class="content__button content__button_hidden">
+        <span>следующий вопрос</span>
+    </button>
+</main>
+
+<script src="js/questions.js" async></script>
+</body>
+</html>

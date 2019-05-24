@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+@import "modules/header/header";
+@import "modules/registration/registration";
+
+body, h1, h2, h3, h4, h5, h6, p, form, input, button, ul, li, figure{
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans";
+}
+a {
+  text-decoration: none;
+}

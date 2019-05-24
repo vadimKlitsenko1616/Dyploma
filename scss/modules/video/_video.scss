@@ -1,0 +1,82 @@
+@import "../../variables";
+@import "../../mixins";
+
+.recording {
+  position: relative;
+  box-sizing: border-box;
+  width: 90vw;
+  height: 90vw;
+  padding: 12px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+
+  &__video {
+    position: absolute;
+    top: calc(50% - 45vw);
+    left: calc(50% - 45vw);
+    z-index: 1;
+    display: block;
+    width: 90vw;
+    height: 90vw;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+
+    &_half-size {
+      top: calc(50% - 22.5vw);
+      left: calc(50% - 22.5vw);
+      width: 45vw;
+      height: 45vw;
+    }
+  }
+  &__video-preview {
+    z-index: -1;
+  }
+  &__video-preview_active {
+    z-index: 5;
+  }
+  &__descr {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+    @include flex(center, center);
+    margin: 0;
+
+    img {
+      display: none;
+      margin-right: 12px;
+    }
+    span {
+      padding: 10px 12px;
+      background-color: #fff;
+      border-radius: 17px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: $title-color;
+    }
+    &_active {
+      top: 0;
+      left: 0;
+      img {
+        display: inline-block;
+        margin: 0;
+      }
+      span {
+        background-color: $text-color-red;
+        color: #fff;
+      }
+    }
+    &__pause {
+      span {
+        background-color: $border-color;
+        color: #4b4e4f;
+      }
+    }
+    &_hidden {
+      display: none;
+    }
+  }
+}

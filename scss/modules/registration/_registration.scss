@@ -1,0 +1,95 @@
+@import "../../variables";
+@import "../../mixins";
+
+@import "../form/form";
+
+.registration {
+  height: 90.5vh;
+  box-sizing: border-box;
+  padding: 5% 5%;
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  background: url("../img/webp/background_mobile_sm.webp") no-repeat center/cover;
+
+  &__title {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.06;
+    color: $title-color;
+    padding-bottom: 16px;
+  }
+  &__text{
+    font-family: "Noto Sans";
+    font-size: 15px;
+    color: $text-color;
+    padding-bottom: 24px;
+  }
+  &__title, &__text {
+    width: 65%;
+  }
+  &__descr {
+    padding-top: 12px;
+    font-size: 12px;
+    color: $description-color;
+  }
+  &__call-me {
+    cursor: pointer;
+    @include flex(flex-start, center);
+    box-sizing: content-box;
+    padding: 16px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: $text-color-green;
+    font-family: "Noto Sans";
+    font-weight: 600;
+    figure {
+      @include flex(center, center);
+      margin-right: 12px;
+    }
+    img {
+      height: 3.2vh;
+    }
+    p {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      text-align: start;
+    }
+  }
+  @keyframes ringing {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  &__call-me_ringing {
+    font-weight: 400;
+    color: $title-color;
+
+
+    figure {
+      position: relative;
+      background-color: #fff;
+      width: 28px;
+      height: 28px;
+      margin: 21px 33px 21px 21px;
+      border-radius: 50%;
+      border: 8px solid $border-color;
+      
+      &::before {
+        position: absolute;
+        content: "";
+        width: 36px;
+        height: 36px;
+        border: 17px solid $border-color;
+        border-radius: 50%;
+        animation-name: ringing;
+        animation-duration: 0.8s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../form/form-tablet(425-1024)";
+
+@media (min-width: 450px) and (max-width: 1024px) {
+  .registration {
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: center;
+    background: url("../img/background_mobile_lg.jpg") no-repeat center / cover;
+
+
+    &__title {
+      font-size: 48px;
+      line-height: 1.06;
+    }
+    &__text {
+      font-size: 18px;
+    }
+    &__title, &__text {
+      padding-bottom: 24px;
+      width: 100%;
+    }
+  }
+}

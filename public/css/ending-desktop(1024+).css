@@ -1,0 +1,22 @@
+/* -- colors -- */
+/* -- colors -- */
+@media (min-width: 1024px) {
+  .header {
+    padding-left: 18vw;
+    padding-right: 14vw;
+    height: 6vh; }
+    .header__logo {
+      height: 4vh; } }
+
+@media (min-width: 1025px) {
+  .container {
+    padding: 0 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .container .content {
+      width: 34vw; }
+    .container__img {
+      width: 24vw; } }
+
+/*# sourceMappingURL=ending-desktop(1024+).css.map */

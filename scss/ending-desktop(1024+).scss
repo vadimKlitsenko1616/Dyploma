@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+
+@import "modules/header/header-desktop(1024+)";
+
+@media (min-width: 1025px) {
+  .container {
+    padding: 0 18%;
+    @include flex(space-between, center);
+
+    .content {
+      width: 34vw;
+    }
+    &__img {
+      width: 24vw;
+    }
+  }
+}

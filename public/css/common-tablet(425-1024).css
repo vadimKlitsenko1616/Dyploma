@@ -1,0 +1,12 @@
+@media (min-width: 450px) and (max-width: 1024px) {
+  .header__logo {
+    height: 5vh; } }
+
+@media (min-width: 425px) and (max-width: 1024px) {
+  .content {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .content__title {
+      margin-bottom: 24px; } }
+
+/*# sourceMappingURL=common-tablet(425-1024).css.map */

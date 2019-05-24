@@ -1,0 +1,15 @@
+@import "modules/header/header-desktop(1024+)";
+@import "modules/video/video-desktop(1024+)";
+
+@media (min-width: 1025px) {
+  .content {
+    position: relative;
+    padding-left: 18vw;
+    padding-bottom: 0;
+    width: 33%;
+
+    &__button {
+      width: 18.5vw;
+    }
+  }
+}

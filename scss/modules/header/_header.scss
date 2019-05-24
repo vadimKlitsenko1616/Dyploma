@@ -1,0 +1,11 @@
+@import "../../variables";
+@import "../../mixins";
+
+@import "../language/language";
+.header {
+  @include flex(space-between, center);
+  height: 9.5vh;
+  background-color: $header-bg;
+  padding: 0 5%;
+
+}

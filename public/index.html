@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Онлайн собеседование</title>
+
+    <link rel="preload" href="fonts/OpenSans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/NotoSans/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/NotoSans/NotoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="prerender" href="settings.html">
+
+    <link rel="preload" href="css/fonts.css" as="style">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/style-tablet(425-1024).css" media="(min-width: 425px) and (max-width: 1024px)" as="style" type="text/css">
+    <link rel="preload" href="css/style-desktop(1024+).css" media="(min-width: 1024px)" as="style" type="text/css">
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-tablet(425-1024).css" media="(min-width: 425px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/style-desktop(1024+).css" media="(min-width: 1025px)">
+
+</head>
+<body>
+
+<header class="header">
+    <img class="header__logo" src="img/svg/logo.svg" alt="ПриватБанк24">
+    <nav class="language">
+        <a href="#" class="language__item">укр</a>
+        <a href="#" class="language__item language__item_active">рус</a>
+    </nav>
+</header>
+<main class="registration" id="container">
+
+    <h1 class="registration__title">Офлайн интервью</h1>
+    <p class="registration__text">
+        Добро пожаловать в систему дистанционной
+        оценки кандидатов на работу в ПриватБанк.
+        Пожалуйста, введите номер телефона, который Вы указали
+        в резюме.
+    </p>
+    <form class="form" id="phoneForm" onsubmit="postUserNumber()">
+        <input id="phone"
+               class="form__input"
+               type="tel"
+               name="phone"
+               value="+380 (__) ___-__-__"
+               pattern="^\+380 \((66|95|99|68)\) [0-9]{3}-[0-9]{2}-[0-9]{2}$"
+               required>
+        <button class="form__submit" type="button" onclick="postUserNumber()">
+            <img src="img/svg/next.svg" alt="next">
+        </button>
+    </form>
+    <template id="OTPFormTemplate">
+        <form class="form" action="settings.html">
+            <input id="OTP"
+                   class="form__input"
+                   type="tel" placeholder="Введите ОТП-пароль">
+            <button class="form__submit" type="button" onclick="postOTP()">
+                <img src="img/svg/next.svg" alt="next">
+            </button>
+        </form>
+    </template>
+    <template id="registrationDescr">
+        <p class="registration__descr">
+            На номер <span id="userNumberContainer"></span> был отправлен SMS
+            пароль. Сообщение может прийти в Приват24,
+            Sender или в виде SMS сообщения.
+        </p>
+        <p class="registration__descr">
+            Через <span id="timer"></span> Вы сможете подтвердить вход
+            при помощи звонка.
+        </p>
+    </template>
+    <template id="callMe">
+        <button class="registration__call-me" id="callMeButton" onclick="addClass()">
+            <figure>
+                <img src="img/svg/phoneicon.svg" alt="call me">
+            </figure>
+            <p>Позвоните мне </p>
+        </button>
+    </template>
+
+</main>
+
+<script src="js/registration.js" async></script>
+
+</body>
+</html>
