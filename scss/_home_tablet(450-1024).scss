@@ -1,0 +1,24 @@
+@import "learn-more-button_tablet(450-1024)";
+@import "scroll_tablet(450-1024)";
+
+.home {
+  &__title {
+    font-size: 70px;
+  }
+  &__background {
+    width: 50vw;
+    height: 50vh;
+
+    &_first {
+
+    }
+    &_second {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+      height: 100vh;
+    }
+  }
+}

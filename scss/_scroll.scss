@@ -1,0 +1,49 @@
+@import "variables";
+@import "mixins";
+
+.scroll {
+  @include flex(center, center, column);
+
+  &__mouse-img {
+    width: 5vw;
+  }
+  &__description {
+    @include flex(center, center, column);
+    margin-top: 40%;
+  }
+  &__arrow {
+    position: relative;
+    display: block;
+    height: 45px;
+    width: 1px;
+    background-color: $white;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 1px;
+      height: 10px;
+      background-color: $white  ;
+      transform-origin: bottom;
+    }
+    &::before {
+      left: 0.5px;
+      transform: rotate(30deg);
+    }
+    &::after {
+      left: -0.5px;
+      transform: rotate(-30deg);
+    }
+  }
+  &__text {
+    margin-top: 20%;
+    transform-origin: left;
+    transform: rotate(90deg) translateY(-24px);
+    color: $dark-gray;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+}

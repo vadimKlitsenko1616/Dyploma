@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+@import "title_tablet(450-1024)";
+@import "header_tablet(450-1024)";
+
+
+@media (min-width:450px) and (max-width: 1024px) {
+  @import "title_tablet(450-1024)";
+  @import "header_tablet(450-1024)";
+  @import "home_tablet(450-1024)";
+  @import "description-item_tablet(450-1024)";
+  @import "wooder_tablet(450-1024)";
+  @import "complexity_tablet(450-1024)";
+  @import "about-us_tablet(450-1024)";
+}

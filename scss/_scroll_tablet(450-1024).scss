@@ -1,0 +1,9 @@
+.scroll {
+  &__mouse-img {
+    width: 3.5vw;
+  }
+  &__text {
+    font-size: 16px;
+    transform: rotate(90deg) translateY(-36px);
+  }
+}

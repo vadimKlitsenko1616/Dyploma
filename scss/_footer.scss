@@ -1,0 +1,52 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  position: relative;
+  @include flex(space-between, center, row);
+  padding: 5px   5%;
+  background: url("../img/footer_background.jpg") no-repeat center/cover;
+
+  &__license {
+    @include flex(center, center, row);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $dark-gray-text;
+    svg {
+      margin-right: 2px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+  .title {
+    font-size: 14px;
+    position: relative;
+    color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1.5px);
+      left: 20%;
+      width: 24.5px;
+      height: 3px;
+      background-color: $yellow;
+    }
+  }
+  &__ul {
+    @include flex(center, flex-start, column);
+
+  }
+  &__item + &__item {
+    margin-top: 5px;
+  }
+  &__text {
+    @include flex(center, flex-start, column);
+    font-size: 8px;
+    color: $dark-gray-text;
+    &_name {
+      color: #7d7d7d;
+    }
+  }
+}

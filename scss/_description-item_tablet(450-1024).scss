@@ -1,0 +1,27 @@
+.description-item {
+  &__text {
+    font-size: 16px;
+    &::after {
+      top: 10px;
+      height: 4px;
+    }
+  }
+  &__link {
+    font-size: 20px;
+    padding: 2% 0;
+
+    &::after {
+      width: 30%;
+      height: 4px;
+    }
+    span {
+      width: 35px;
+      &::after, &::before {
+        width: 10px;
+      }
+    }
+  }
+  &__number {
+    font-size: 20px;
+  }
+}

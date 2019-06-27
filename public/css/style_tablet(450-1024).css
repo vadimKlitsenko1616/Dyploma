@@ -1,0 +1,98 @@
+/* colors */
+.title {
+  font-size: 32px; }
+
+.navigation .title::after {
+  width: 52px;
+  height: 4px; }
+
+.language__link, .language__toggle {
+  font-size: 16px; }
+
+.language__toggle-arrow {
+  width: 14px;
+  height: 14px;
+  top: calc(50% - 12px);
+  left: calc(50% + 10px); }
+
+@media (min-width: 450px) and (max-width: 1024px) {
+  .title {
+    font-size: 32px; }
+  .navigation .title::after {
+    width: 52px;
+    height: 4px; }
+  .language__link, .language__toggle {
+    font-size: 16px; }
+  .language__toggle-arrow {
+    width: 14px;
+    height: 14px;
+    top: calc(50% - 12px);
+    left: calc(50% + 10px); }
+  .learn-more {
+    padding: 3% 6%; }
+    .learn-more__text {
+      font-size: 20px; }
+  .scroll__mouse-img {
+    width: 3.5vw; }
+  .scroll__text {
+    font-size: 16px;
+    transform: rotate(90deg) translateY(-36px); }
+  .home__title {
+    font-size: 70px; }
+  .home__background {
+    width: 50vw;
+    height: 50vh; }
+    .home__background_second {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+      height: 100vh; }
+  .description-item__text {
+    font-size: 16px; }
+    .description-item__text::after {
+      top: 10px;
+      height: 4px; }
+  .description-item__link {
+    font-size: 20px;
+    padding: 2% 0; }
+    .description-item__link::after {
+      width: 30%;
+      height: 4px; }
+    .description-item__link span {
+      width: 35px; }
+      .description-item__link span::after, .description-item__link span::before {
+        width: 10px; }
+  .description-item__number {
+    font-size: 20px; }
+  .video__title {
+    font-size: 18px; }
+  .video__border {
+    width: 40px;
+    height: 4px; }
+  .wooder__description {
+    font-size: 16px; }
+  .complexity__description {
+    font-size: 16px; }
+    .complexity__description::before {
+      height: 4px; }
+  .complexity__link {
+    padding: 3% 6%;
+    font-size: 18px; }
+  .about-us__text {
+    font-size: 16px; }
+    .about-us__text::before {
+      height: 4px; }
+  .about-us__link {
+    padding: 3% 0;
+    font-size: 18px; }
+    .about-us__link::after {
+      width: 35%;
+      height: 4px; }
+    .about-us__link span {
+      width: 35px; }
+      .about-us__link span::before, .about-us__link span::after {
+        width: 10px; } }
+
+/*# sourceMappingURL=style_tablet(450-1024).css.map */

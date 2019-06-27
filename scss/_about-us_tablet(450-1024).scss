@@ -1,0 +1,24 @@
+.about-us {
+  &__text {
+    font-size: 16px;
+    &::before {
+      height: 4px;
+    }
+  }
+  &__link {
+    padding: 3% 0;
+    font-size: 18px;
+
+    &::after {
+      width: 35%;
+      height: 4px;
+    }
+
+    span {
+      width: 35px;
+      &::before, &::after {
+        width: 10px;
+      }
+    }
+  }
+}

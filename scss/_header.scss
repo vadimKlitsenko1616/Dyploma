@@ -1,0 +1,20 @@
+@import "variables";
+@import "mixins";
+@import "functions";
+
+/*import modules*/
+
+@import "menu";
+@import "navigation";
+@import "language";
+
+.header {
+  @include grid(15% 70% 15%, 8vh);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 8vh;
+
+}

@@ -1,77 +1,18 @@
-/* -- Open Sans  -- */
-
 @font-face {
-    font-family: "Open Sans";
-    src: url("../fonts/OpenSans/OpenSans-Light.woff2"),
-    url("../fonts/OpenSans/OpenSans-Light.woff"),
-    url("../fonts/OpenSans/OpenSans-Light.ttf");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Open Sans";
-    src: url("../fonts/OpenSans/OpenSans-Regular.woff2"),
-         url("../fonts/OpenSans/OpenSans-Regular.woff"),
-         url("../fonts/OpenSans/OpenSans-Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Open Sans";
-    src: url("../fonts/OpenSans/OpenSans-SemiBold.woff2"),
-    url("../fonts/OpenSans/OpenSans-SemiBold.woff"),
-    url("../fonts/OpenSans/OpenSans-SemiBold.ttf");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Open Sans";
-    src: url("../fonts/OpenSans/OpenSans-Bold.woff2"),
-    url("../fonts/OpenSans/OpenSans-Bold.woff"),
-    url("../fonts/OpenSans/OpenSans-Bold.ttf");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* -- NOTO SANS -- */
-
-@font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans/NotoSans-Regular.woff2"),
-         url("../fonts/NotoSans/NotoSans-Regular.woff"),
-         url("../fonts/NotoSans/NotoSans-Regular.ttf");
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova-Regular.woff2"),
+         url("../fonts/ProximaNova-Regular.woff"),
+         url("../fonts/ProximaNova-Regular.ttf");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
 @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans/NotoSans-Bold.woff2"),
-         url("../fonts/NotoSans/NotoSans-Bold.woff"),
-         url("../fonts/NotoSans/NotoSans-Bold.ttf");
+    font-family: "Proxima Nova";
+    src: url("../fonts/ProximaNova-Bold.woff2"),
+    url("../fonts/ProximaNova-Bold.woff"),
+    url("../fonts/ProximaNova-Bold.ttf");
     font-style: normal;
     font-weight: 600;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans/NotoSans-Regular-Italic.woff2"),
-        url("../fonts/NotoSans/NotoSans-Regular-Italic.woff"),
-        url("../fonts/NotoSans/NotoSans-Regular-Italic.ttf");
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans/NotoSans-Bold-Italic.woff2"),
-    url("../fonts/NotoSans/NotoSans-Bold-Italic.woff"),
-    url("../fonts/NotoSans/NotoSans-Bold-Italic.ttf");
-    font-style: italic;
-    font-weight: 400;
     font-display: swap;
 }

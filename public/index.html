@@ -1,93 +1,244 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Онлайн собеседование</title>
+    <title>Template</title>
 
-    <link rel="preload" href="fonts/OpenSans/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/OpenSans/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/NotoSans/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/NotoSans/NotoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="prerender" href="settings.html">
-
+    <!-- Preload files -->
     <link rel="preload" href="css/fonts.css" as="style">
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="preload" href="css/style-tablet(425-1024).css" media="(min-width: 425px) and (max-width: 1024px)" as="style" type="text/css">
-    <link rel="preload" href="css/style-desktop(1024+).css" media="(min-width: 1024px)" as="style" type="text/css">
-
+    <!-- CSS links -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-tablet(425-1024).css" media="(min-width: 425px) and (max-width: 1024px)">
-    <link rel="stylesheet" href="css/style-desktop(1024+).css" media="(min-width: 1025px)">
-
+    <link rel="stylesheet" href="css/style_tablet(450-1024).css">
 </head>
 <body>
-
 <header class="header">
-    <img class="header__logo" src="img/svg/logo.svg" alt="ПриватБанк24">
-    <nav class="language">
-        <a href="#" class="language__item">укр</a>
-        <a href="#" class="language__item language__item_active">рус</a>
+    <nav class="menu">
+        <button class="menu__toggle" id="menuToggle" onclick="menuToggle()">
+            <svg>
+                <use xlink:href="#menuButton"></use>
+            </svg>
+            <span>menu</span>
+        </button>
+        <ul class="menu__list" id="menuList">
+            <li class="menu__item"><a href="#" class="menu__link">home</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">products</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">about us</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">contacts</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">make an order</a></li>
+        </ul>
     </nav>
+    <nav class="navigation">
+        <h2 class="title">wooder</h2>
+        <ul class="navigation__list">
+            <li class="navigation__item"><a href="#" class="navigation__link">home</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">products</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">about</a></li>
+        </ul>
+    </nav>
+    <ul class="language">
+        <li class="language__item">
+            <button class="language__toggle" onclick="languageToggle()">en <svg class="language__toggle-arrow"><use xlink:href="#dropDown"></use></svg></button>
+        </li>
+        <li class="language__item language__item_hidden" id="languageDropdown"><a href="#" class="language__link">ru</a></li>
+    </ul>
 </header>
-<main class="registration" id="container">
-
-    <h1 class="registration__title">Офлайн интервью</h1>
-    <p class="registration__text">
-        Добро пожаловать в систему дистанционной
-        оценки кандидатов на работу в ПриватБанк.
-        Пожалуйста, введите номер телефона, который Вы указали
-        в резюме.
+<section class="home">
+    <img src="img/background_1.jpg" alt="log" class="home__background_first">
+    <picture class="home__background home__background_second">
+        <source srcset="img/webP/background_2.webp" type="image/webP">
+        <img src="img/background_2.jpg" alt="deck of wood">
+    </picture>
+    <h2 class="home__title">wooder</h2>
+    <a href="#" class="learn-more">
+        <p class="learn-more__text">learn more</p>
+        <span class="learn-more__arrow"></span>
+    </a>
+    <figure class="scroll">
+        <img src="img/mouse.png" alt="mouse" class="scroll__mouse-img">
+        <figcaption class="scroll__description">
+            <span class="scroll__arrow"></span>
+            <p class="scroll__text">scroll</p>
+        </figcaption>
+    </figure>
+    <p class="home__description">furniture & decor</p>
+</section>
+<!-- second section "PRODUCTS" -->
+<section class="products">
+    <figure class="description-item">
+        <picture class="description-item__img">
+            <source srcset="img/webP/furniture.webp" type="image/webP">
+            <img src="img/furniture.jpg" alt="furniture">
+        </picture>
+        <figcaption class="description-item__content description-item__content_left">
+            <h2 class="title">furniture</h2>
+            <p class="description-item__text">
+                Wooder utilizes materials otherwise left behind, rendered useless in their original intent.
+                By creating new places made of reclaimed barnwood
+            </p>
+            <a href="#" class="description-item__link">
+                <p>learn more</p>
+                <span></span>
+            </a>
+            <p class="description-item__number">01<span>.</span></p>
+        </figcaption>
+    </figure>
+    <figure class="description-item">
+        <picture class="description-item__img">
+            <source srcset="img/webP/decor.webp" type="image/webP">
+            <img src="img/decor.jpg" alt="decor">
+        </picture>
+        <figcaption class="description-item__content description-item__content_right">
+            <h2 class="title">decor</h2>
+            <p class="description-item__text">
+                We make all types of wooden decor as per design given by Architect, Interior designer, contractor which is suitable
+            </p>
+            <a href="#" class="description-item__link">
+                <p>learn more</p>
+                <span></span>
+            </a>
+            <p class="description-item__number description-item__number_right">02<span>.</span></p>
+        </figcaption>
+    </figure>
+</section>
+<section class="wooder">
+    <h2 class="title">wooder - is quality</h2>
+    <hr class="wooder__border">
+    <p class="wooder__description">
+        We create unique design objects made of rare wood, specially under the order.
+        Look at the short video about our work.
     </p>
-    <form class="form" id="phoneForm" onsubmit="postUserNumber()">
-        <input id="phone"
-               class="form__input"
-               type="tel"
-               name="phone"
-               value="+380 (__) ___-__-__"
-               pattern="^\+380 \((66|95|99|68)\) [0-9]{3}-[0-9]{2}-[0-9]{2}$"
-               required>
-        <button class="form__submit" type="button" onclick="postUserNumber()">
-            <img src="img/svg/next.svg" alt="next">
-        </button>
-    </form>
-    <template id="OTPFormTemplate">
-        <form class="form" action="settings.html">
-            <input id="OTP"
-                   class="form__input"
-                   type="tel" placeholder="Введите ОТП-пароль">
-            <button class="form__submit" type="button" onclick="postOTP()">
-                <img src="img/svg/next.svg" alt="next">
-            </button>
-        </form>
-    </template>
-    <template id="registrationDescr">
-        <p class="registration__descr">
-            На номер <span id="userNumberContainer"></span> был отправлен SMS
-            пароль. Сообщение может прийти в Приват24,
-            Sender или в виде SMS сообщения.
-        </p>
-        <p class="registration__descr">
-            Через <span id="timer"></span> Вы сможете подтвердить вход
-            при помощи звонка.
-        </p>
-    </template>
-    <template id="callMe">
-        <button class="registration__call-me" id="callMeButton" onclick="addClass()">
-            <figure>
-                <img src="img/svg/phoneicon.svg" alt="call me">
+    <ul class="video">
+        <li class="video__item">
+            <figure class="video__img-container">
+                <picture class="video__img">
+                    <source srcset="img/webP/first_video.webp" type="image/webP">
+                    <img src="img/first_video.png" alt="table">
+                </picture>
+                <figcaption class="video__img-play">
+                    <svg>
+                        <use xlink:href="#play"></use>
+                    </svg>
+                </figcaption>
             </figure>
-            <p>Позвоните мне </p>
-        </button>
-    </template>
+            <hr class="video__border">
+            <h4 class="video__title">innovative design</h4>
+        </li>
+        <li class="video__item">
+            <figure class="video__img-container">
+                <picture class="video__img">
+                    <source srcset="img/webP/second_video.webp" type="image/webP">
+                    <img src="img/second_video.png" alt="chair">
+                </picture>
+                <figcaption class="video__img-play">
+                    <svg>
+                        <use xlink:href="#play"></use>
+                    </svg>
+                </figcaption>
+            </figure>
+            <hr class="video__border">
+            <h4 class="video__title">high-level skills</h4>
+        </li>
+        <li class="video__item">
+            <figure class="video__img-container">
+                <picture class="video__img">
+                    <source srcset="img/webP/third_video.webp" type="image/webP">
+                    <img src="img/third_video.png" alt="shelf">
+                </picture>
+                <figcaption class="video__img-play">
+                    <svg>
+                        <use xlink:href="#play"></use>
+                    </svg>
+                </figcaption>
+            </figure>
+            <hr class="video__border">
+            <h4 class="video__title">quality products</h4>
+        </li>
+    </ul>
+</section>
+<section class="complexity">
+    <picture class="complexity__background">
+        <source srcset="img/webP/complexity_background.webp" type="image/webP">
+        <img src="img/complexity_background.jpg" alt="wood">
+    </picture>
+    <ul class="complexity__list">
+        <li class="complexity__item">
+            <h2 class="title">we do the design of any complexity</h2>
+            <p class="complexity__description">
+                This is the team of professionals that make the furniture and
+                the wood decor high standard. Creating modern designs. Adhering to the global quality standards.
+                And we are doing work with love.
+            </p>
+            <a href="" class="complexity__link">
+                <svg>
+                    <use xlink:href="#playCircle"></use>
+                </svg>
+                <p>watch video</p>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="about-us">
+    <figure class="about-us__item">
+        <picture class="about-us__img">
+            <source srcset="img/webP/about-us_image.webp" type="image/webP">
+            <img src="img/about-us_image.jpg" alt="oldschool car with guys">
+        </picture>
+        <figcaption class="about-us__description">
+            <h2 class="title">about us</h2>
+            <p class="about-us__text">
+                We are team of professionals in the wood processing and the creation of wooden furniture of the highest class
+            </p>
+            <a href="#" class="about-us__link">
+                <p>learn more</p>
+                <span></span>
+            </a>
+        </figcaption>
+    </figure>
+</section>
+<footer class="footer">
+    <p class="footer__license">
+        <svg>
+            <use xlink:href="#copyright"></use>
+        </svg>
+        2016 wooder
+    </p>
+    <h2 class="title">wooder</h2>
+    <ul class="footer__ul">
+        <li class="footer__item">
+            <p class="footer__text"><span>designed by </span><span class="footer__text_name">Viacheslav Olianishin</span></p>
+        </li>
+        <li class="footer__item">
+            <p class="footer__text"><span>created by </span><span>Vadim Klitseko</span></p>
+        </li>
+    </ul>
+</footer>
 
-</main>
 
-<script src="js/registration.js" async></script>
+<!-- SVG storage -->
 
+<svg style="display: none">
+    <symbol id="menuButton" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/>
+    </symbol>
+    <symbol id="dropDown" viewBox="0 0 320 512">
+        <path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"/>
+    </symbol>
+    <symbol id="play" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/>
+    </symbol>
+    <symbol id="playCircle" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"/>
+    </symbol>
+    <symbol id="copyright" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/>
+    </symbol>
+</svg>
+
+<script src="js/menuToggle.js" async></script>
+<script src="js/languageToggle.js" async></script>
 </body>
 </html>

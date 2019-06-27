@@ -1,0 +1,62 @@
+@import "variables";
+@import "mixins";
+
+@import "learn-more-button";
+@import "scroll";
+
+.home {
+  position: relative;
+  @include flex(center, center, column);
+  box-sizing: border-box;
+  padding: 0 5%;
+  height: 100vh;
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include flex(center, center, row);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &_first {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      height: 100vh;
+    }
+    &_second {
+      display: none;
+    }
+
+    img {
+      height: 100vh;
+    }
+  }
+  &__title {
+    font-size: 38px;
+    font-weight: 600;
+    color: $yellow;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+  }
+  .learn-more {
+    margin: 6% 0 12% 0;
+  }
+  &__description {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform-origin: center;
+    transform: rotate(90deg) translateY(-50px);
+    color: $yellow;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+  }
+}

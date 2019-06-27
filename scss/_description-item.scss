@@ -1,0 +1,140 @@
+@import "variables";
+@import "mixins";
+
+.description-item {
+  @include grid( 1fr, repeat(2, max-content));
+
+  &__img {
+    @include flex(center, center, row);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5% 0;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &_left {
+      padding-left: 20%;
+      align-items: flex-start;
+      .title::after {
+        left: -15vw;
+      }
+      .description-item__text::after {
+        left: -10vw;
+      }
+    }
+    &_right {
+      align-items: flex-end;
+      text-align: right;
+      padding-right: 20%;
+      .title::after {
+        right: -15vw;
+      }
+      .description-item__text::after {
+        right: -10vw;
+      }
+      .decoration-item__link {
+        margin-right: 0;
+      }
+    }
+  }
+  .title {
+    position: relative;
+    margin-bottom: 5%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 0.5px);
+      width: 10vw;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+  &__text {
+    margin-bottom: 5%;
+    position: relative;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #464646;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      width: 5vw;
+      height: 3px;
+      background-color: $yellow;
+    }
+  }
+  &__link {
+    position: relative;
+    @include flex(flex-start, center, row);
+    padding: 4px 0;
+    color: $black;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: block;
+      width: 20%;
+      height: 2px;
+      background-color: $yellow;
+    }
+
+    span {
+      margin-left: 10px;
+      position: relative;
+      display: block;
+      width: 25px;
+      height: 1px;
+      background-color: $yellow;
+
+      &::after, &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 0.5px);
+        right: -1px;
+        width: 7px;
+        height: 1px;
+        background-color: $yellow;
+        transform-origin: right;
+      }
+      &::before {
+        transform: rotate(30deg);
+      }
+      &::after {
+        transform: rotate(-30deg);
+      }
+    }
+  }
+  &__number {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: $black;
+
+    span {
+      color: $yellow;
+    }
+    &_right {
+      right: 0;
+    }
+  }
+}

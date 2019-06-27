@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+
+@import "description-item";
+
+.products {
+  @include flex(center, center, column);
+  box-sizing: border-box;
+  padding: 50px 10%;
+
+  .description-item + .description-item {
+    margin-top: 50px;
+  }
+}
